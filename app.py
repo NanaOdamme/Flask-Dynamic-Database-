@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-  return "I am a flask"
+  return "I am a flask app"
 
 
 print(__name__)
