@@ -117,8 +117,7 @@
                     <h5 class="card-title">THE DARK KNIGHT</h5>
                     <p class="card-text">Author: Author Name</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal" data-description="Description of Book 1.">Read More</button>
-                   <a href="#" class="btn btn-success" onclick="addToLibrary('Book Title 1')">Add to Library</a>
-
+                    <a href="#" class="btn btn-success">Add to Library</a>
                 </div>
             </div>
         </div>
@@ -130,7 +129,7 @@
                     <h5 class="card-title">Book Title 1</h5>
                     <p class="card-text">Author: Author Name</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal" data-description="Description of Book 1.">Read More</button>
-                    <a href="#" class="btn btn-success" onclick="addToLibrary('Book Title 1')">Add to Library</a>
+                    <a href="#" class="btn btn-success">Add to Library</a>
                 </div>
             </div>
         </div>
@@ -142,7 +141,7 @@
                     <h5 class="card-title">Book Title 1</h5>
                     <p class="card-text">Author: Author Name</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal" data-description="Description of Book 1.">Read More</button>
-                    <a href="#" class="btn btn-success" onclick="addToLibrary('Book Title 1')">Add to Library</a>
+                    <a href="#" class="btn btn-success">Add to Library</a>
                 </div>
             </div>
         </div>
@@ -154,7 +153,7 @@
                     <h5 class="card-title">Book Title 1</h5>
                     <p class="card-text">Author: Author Name</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal" data-description="Description of Book 1.">Read More</button>
-                    <a href="#" class="btn btn-success" onclick="addToLibrary('Book Title 1')">Add to Library</a>
+                    <a href="#" class="btn btn-success">Add to Library</a>
                 </div>
             </div>
         </div>
@@ -166,10 +165,13 @@
                     <h5 class="card-title">Book Title 1</h5>
                     <p class="card-text">Author: Author Name</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal" data-description="Description of Book 1.">Read More</button>
-                    <a href="#" class="btn btn-success" onclick="addToLibrary('Book Title 1')">Add to Library</a>
+                    <a href="#" class="btn btn-success">Add to Library</a>
                 </div>
             </div>
         </div>
+
+        <!-- templates/index.html -->
+ <!-- templates/index.html -->
   <div class="col-md-4 mb-4">
     <div class="card">
         <img src="{{ url_for('static', filename='images/boos (3).jpg') }}" class="card-img-top" alt="Book Cover 1">
@@ -177,7 +179,7 @@
             <h5 class="card-title">Book Title 1</h5>
             <p class="card-text">Author: Author Name</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal" data-description="**Whispers of Dawn** In the quiet embrace of morning light, Dew-kissed petals unfurl, delicate and bright. The sun tiptoes across the horizon's edge, Painting the sky with hues of saffron pledge. Birdsong weaves through leaves, a gentle refrain, As daybreak whispers secrets to the waking plain. In this tender dance of dawn and dew, Hope blooms anew, painting the world in view.">Read More</button>
-            <a href="#" class="btn btn-success" onclick="addToLibrary('Book Title 1')">Add to Library</a>
+            <a href="#" class="btn btn-success">Add to Library</a>
         </div>
     </div>
   </div>
@@ -248,21 +250,6 @@
         $('#bookCarousel').carousel();
     });
 </script>
-
-<script>
-    function addToLibrary(bookTitle) {
-        $.ajax({
-            url: '/add_to_library/' + bookTitle,
-            success: function(data) {
-                console.log('Book added to library');
-            },
-            error: function(error) {
-                console.error('Error adding book to library', error);
-            }
-        });
-    }
-</script>
-
 
 </body>
 </html>
